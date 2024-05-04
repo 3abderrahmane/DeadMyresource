@@ -1,0 +1,172 @@
+
+
+body {
+  animation: mymove 90s infinite;
+	background-color:#cde364;
+	background-image: radial-gradient(#fff 10%, transparent 10%),
+	radial-gradient(#fff 10%, transparent 10%);
+	background-size: 30px 30px;
+	background-position: 0 0, 15px 15px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  from {background-color: red;}
+  20%  {background-color: pink;}
+  35%  {background-color: white;}
+  50% {background-color: blue;}
+  60% {background-color: black;}
+  75% {background-color: #cde364;}
+  to {background-color: orange;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  from {background-color: red;}
+  20%  {background-color: pink;}  
+  35%  {background-color: white;}
+  50% {background-color: blue;}
+  60% {background-color: black;}
+  75% {background-color: #cde364;}
+  to {background-color: orange;}
+}
+header{
+	margin-bottom: 80px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.brcolor{ 
+	border: 7px solid;
+    border-color: #6CC644 #FFC621 #DE6525 #256A84;
+}
+.sliderbordercolor{
+	 border-width: 7px;
+     border-style: solid;
+     border-color: #ccc #666 black ;
+}
+.headerborder{
+     color: #6CC644 blue;
+     border: medium solid;
+     border-style: ridge dashed solid;
+}
+.ultimate{ 
+	background-color: orange;
+	border-top: 3px dotted #000;
+	border-bottom: 3px dotted #000;
+	box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+	margin-bottom: 1px;
+}
+.menuborder a {
+                background-color: olive;
+                font-size: 20px;
+                font-weight: bolder;
+                border: 2px solid orange;
+                width: auto;
+                border-radius: 50px 20px;
+                padding: 1% 2%;
+                color:white;
+  }
+.menuborder a:hover {
+                      background-color:yellow;
+                      color: blue !important;  
+                      border-radius:60%;
+                      border-color: orange;
+                      text-decoration: underline;
+ }
+#submit:hover{
+  color:black;
+  background-color: whitesmoke;
+  font-size: 18px;
+  font-weight: bold;
+}
+#showBox{
+  display:none;
+}
+#thanks{
+  border-radius: 20%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  background-color:coral;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  padding: 50px;
+  text-align: center;
+  color: aliceblue;
+}
+#thanks img {
+  max-width:100%;
+  margin-top: 10px;
+}
+.nav-link {
+color: white !important;
+}
+#totop {
+	color:white;
+  margin-top: 20px;
+}
+.carousel {
+  width:auto;
+  height:auto;
+}
+.demotext {
+  color:rgb(30, 11, 246);
+}
+h4 { color: blue;
+  }
+.btn-primary {
+   font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: black !important;
+} 
+h4 {
+	font-family: fantasy;
+	text-align: center;
+}
+#aboutkeys{
+  margin-bottom: 30px;
+}
+.pay{
+  position: fixed;
+  bottom: 25%;
+  right: 0px;
+}
+.privacy {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #938686;
+  color:whitesmoke;
+  opacity: 0.95;
+  border-radius: 20%;
+}
+.privacy p {
+  color: rgb(11, 2, 0);
+  font-size:large;
+  font-style: oblique;
+}
+.footerborder{
+	height: auto;
+  background-color: #313537;
+	border-bottom: 7px dotted #000;
+	box-shadow: inset 0 -3px 0 0 #000, 0 3px 0 0 #000;
+	border-top: 7px dotted #000;
+	box-shadow: inset 0 3px 0 0 #000, 0 -3px 0 0 #000;
+  color: aqua;
+  margin-top: 50px;
+  padding-bottom: 5px;
+}
+
+.footerborder button:hover, .pay:hover{
+  font-size: 18px;
+  color: chartreuse;
+}
+footer p {
+	font-family: cursive;
+	font-weight: bold;
+	font-stretch: expanded;
+	font-size: 14px;
+}
