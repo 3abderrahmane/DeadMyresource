@@ -5,7 +5,7 @@ require('dotenv').config()
  
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://' + process.env.MONGOUSER + ':'+ process.env.MONGOPASS + '@cluster0.a3r3zu4.mongodb.net/');
+mongoose.connect('mongodb+srv://' + process.env.MONGOUSER + ':'+ process.env.MONGOPASS + '@cluster0.a3r3zu4.mongodb.net/ERERdesign');
 
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
@@ -38,20 +38,20 @@ app.post('/request', function(req,res){
         "Phone Number": number
     };
     const passedData = Object.assign(formdata, data);
-db.collection('details').insertOne(data,function(err, collection){
+    db.collection('Guest').insertOne(data,function(err, collection){
         if (err) throw err;
         console.log("Record inserted Successfully");
 
         var transporter = nodemailer.createTransport({
-          service: 'outlook',
+          service: "gmail",
           auth: {
-            user: process.env.EMAIL,
-            pass: process.env.EMAILPASS,
+            user: process.env.GMAIL,
+            pass: process.env.GPASS
           }
         });
         var mailOptions = {
-          from: process.env.EMAIL,
-          to: process.env.EMAIL,
+          from: process.env.GMAIL,
+          to: process.env.GMAIL,
           subject: formdata.Subject,
           text: JSON.stringify(formdata, null, '\t').replace(/"(\w+)"\s*:/g, '$1:')
         };
@@ -74,7 +74,7 @@ app.get('/',function(req,res){
         'Access-control-Allow-Origin': '*'
         });
     return res.sendFile(__dirname + '/index.html');
-    }).listen(3000)
+}).listen(3000)
 
 console.log("server listening at port 3000");
 

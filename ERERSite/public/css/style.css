@@ -38,17 +38,26 @@ header{
 }
 .brcolor{ 
 	border: 7px solid;
-    border-color: #6CC644 #FFC621 #DE6525 #256A84;
+  border-color: #6CC644 #FFC621 #DE6525 #256A84;
 }
-.sliderbordercolor{
-	 border-width: 7px;
-     border-style: solid;
-     border-color: #ccc #666 black ;
+.sliderbordercolor , .content{
+	border-width: 7px;
+  border-style: solid;
+  border-color: #ccc #666 black ;
+}
+.aboutlogos{
+  background-color: darkblue;
+}
+.content{
+  margin-top: 20px;
+  background-color:dimgrey;
+  opacity: 0.95;
+  padding: 0px;
 }
 .headerborder{
-     color: #6CC644 blue;
-     border: medium solid;
-     border-style: ridge dashed solid;
+  color: #6CC644 blue;
+  border: medium solid;
+  border-style: ridge dashed solid;
 }
 .ultimate{ 
 	background-color: orange;
@@ -58,21 +67,27 @@ header{
 	margin-bottom: 1px;
 }
 .menuborder a {
-                background-color: olive;
-                font-size: 20px;
-                font-weight: bolder;
-                border: 2px solid orange;
-                width: auto;
-                border-radius: 50px 20px;
-                padding: 1% 2%;
-                color:white;
+  background-color: olive;
+  font-size: 20px;
+  font-weight: bolder;
+  border: 2px solid orange;
+  width: auto;
+  border-radius: 50px 20px;
+  padding: 1% 2%;
+  color:white;
   }
-.menuborder a:hover {
-                      background-color:yellow;
-                      color: blue !important;  
-                      border-radius:60%;
-                      border-color: orange;
-                      text-decoration: underline;
+.menuborder a:hover{
+  background-color:yellow;
+  color: blue !important;  
+  border-radius:60%;
+  border-color: orange;
+  text-decoration: underline;
+ }
+ #submit {
+  font-size: 20px;
+  border: 2px solid orange;
+  background:rgb(28, 56, 1);
+  margin-bottom: 50px;
  }
 #submit:hover{
   color:black;
@@ -80,14 +95,43 @@ header{
   font-size: 18px;
   font-weight: bold;
 }
+.lead{
+  padding: 15px;
+  margin-top: 4px;
+  border-radius: 10%;
+  border: solid 2px black ;
+  font-size: 22px;
+  font-style: italic;
+}
+.call-time{
+  margin-bottom: 50px;
+}
 #showBox{
   display:none;
+}
+.e-mail:before {
+  content: attr(data-website) "\0040" attr(data-user);
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  letter-spacing: 3px;
+}
+.e-phone:before {
+  content: attr(data-website) attr(data-user);
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  letter-spacing: 3px;
+}
+
+.credibility{
+  padding-bottom: 20px;
+  font-size: 20px;
 }
 #thanks{
   border-radius: 20%;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: larger;
-  background-color:coral;
+  background-color:mediumblue;
+  opacity: 0.8;
   margin-left: auto;
   margin-right: auto;
   max-width: fit-content;
@@ -105,6 +149,7 @@ color: white !important;
 #totop {
 	color:white;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 .carousel {
   width:auto;
@@ -130,8 +175,14 @@ h4 {
 }
 .pay{
   position: fixed;
-  bottom: 25%;
+  bottom: 2%;
   right: 0px;
+  font-size: 20px;
+  border: 2px solid whitesmoke;
+}
+a .pay:hover {
+  font-size: 24px;
+
 }
 .privacy {
   padding-left: 20%;
@@ -147,6 +198,17 @@ h4 {
   color: rgb(11, 2, 0);
   font-size:large;
   font-style: oblique;
+}
+#paybox{
+  width:80%; 
+  height:600px; 
+  margin:1%; 
+  margin-left: 10%; 
+  border-radius: 20%; 
+  border: 6px solid blueviolet;
+  background-color:lightskyblue;
+  box-shadow: 10px 10px 5px 12px rgb(160, 171, 175);
+  opacity: 0.95;
 }
 .footerborder{
 	height: auto;
