@@ -14,9 +14,11 @@ update.addEventListener('click', _ => {
           })
       })
       .then(res => {
-        if (res.ok) 
-            return res.json()
-        else {
+        if (res.ok){     
+           window.location.reload(true)
+           return res.json()
+        }
+       else {
             throw new Error('something went wrong!')
             }
       })

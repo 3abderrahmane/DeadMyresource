@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
         .toArray()
         .then(results => {
             res.render('index.ejs', { data: results })
-    })
+        })
     .catch(error => console.error(error))
 });
 
@@ -50,7 +50,7 @@ app.put('/Input', (req, res) => {
     console.log(req.body)
     db.collection('rawdata')
     .findOneAndUpdate(
-        { name: 'ABDERR' },
+        { name: 'Lwrda' },
         {
         $set: {
             name: req.body.name,
@@ -63,6 +63,7 @@ app.put('/Input', (req, res) => {
     )
     .then(result => {
         res.json("Done")//loged into console of the browser not the vcode terminal
+        
     })
     .catch(error => console.error(error))
 })
