@@ -74,7 +74,7 @@ app.get('/',function(req,res){
         'Access-control-Allow-Origin': '*'
         });
     return res.sendFile(__dirname + '/index.html');
-}).listen(1000)
+}).listen(10000)
 
-console.log("server listening at port 1000");
+console.log("server listening at port 10000");
 
