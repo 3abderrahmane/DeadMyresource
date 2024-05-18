@@ -5,7 +5,7 @@ require('dotenv').config()
  
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://' + process.env.MONGOUSER + ':'+ process.env.MONGOPASS + '@cluster0.a3r3zu4.mongodb.net/ERERdesign');
+mongoose.connect('mongodb://' + process.env.MONGOUSER + ':'+ process.env.MONGOPASS + '@cluster0.a3r3zu4.mongodb.net/ERERdesign');
 
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
