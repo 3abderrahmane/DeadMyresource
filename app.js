@@ -66,7 +66,7 @@ app.post('/request', function(req,res){
          
     });
      res.render('thankyou');
-    //return res.redirect(`http://www.afouko.com`);
+    //return res.redirect(`https://www.ererdesign.com/contact.html`);
     //return res.sendFile(__dirname + '/thankyou.html');
 })
 console.log(formdata);
