@@ -2,6 +2,10 @@ var express=require("express");
 var bodyParser=require("body-parser");
 var nodemailer = require('nodemailer');
 require('dotenv').config();
+
+//Restarting the server since render stopp it
+const wokeUp = require("./cron");
+wokeUp.stayUp();
 const port = process.env.PORT || 3001;///Added
  
 const mongoose = require('mongoose');
