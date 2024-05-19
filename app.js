@@ -83,4 +83,8 @@ server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
 //console.log("server listening at port 10000");
+//}).listen(10000)
+
+console.log("server listening at port 10000");
+
 
