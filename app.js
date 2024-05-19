@@ -1,11 +1,12 @@
 var express=require("express");
 var bodyParser=require("body-parser");
 var nodemailer = require('nodemailer');
-require('dotenv').config() 
+require('dotenv').config();
+const port = process.env.PORT || 3001;///Added
  
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://' + process.env.MONGOUSER + ':'+ process.env.MONGOPASS + '@cluster0.a3r3zu4.mongodb.net/ERERdesign');
+mongoose.connect('mongodb+srv://' + process.env.MONGOUSER + ':'+ process.env.MONGOPASS + '@cluster0.a3r3zu4.mongodb.net/ERERdesign');
 
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
@@ -74,7 +75,12 @@ app.get('/',function(req,res){
         'Access-control-Allow-Origin': '*'
         });
     return res.sendFile(__dirname + '/index.html');
-}).listen(3000)
+});
+////.listen(port)
 
-console.log("server listening at port 3000");
+const server = app.listen(port, () => console.log(`App listening on port ${port}!`));
+server.keepAliveTimeout = 120 * 1000;
+server.headersTimeout = 120 * 1000;
+
+//console.log("server listening at port 10000");
 
