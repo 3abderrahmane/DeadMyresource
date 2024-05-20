@@ -89,6 +89,5 @@ cron.schedule('*/10 * * * * *', () => {
 
 cron.schedule('* */1 * * * *', () => {
   console.clear();
-  console.log('Cleared!!!');
 });
 
