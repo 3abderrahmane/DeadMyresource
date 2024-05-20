@@ -2,8 +2,6 @@ var express=require("express");
 var bodyParser=require("body-parser");
 var nodemailer = require('nodemailer');
 require('dotenv').config();
-//For keeping up the render server up all the time
-var cron = require('node-cron');
 
 const port = process.env.PORT || 3001;///Added
 const mongoose = require('mongoose');
@@ -82,14 +80,5 @@ const server = app.listen(port, () => console.log(`App listening on port ${port}
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
-//Restarting the server since render stopp it
-cron.schedule('*/15 * * * * *', () => {
-  console.log('Run every 15 seconds!!!');
-  fetch('https://www.amazon.com')
-    .then((response) => response.text())
-    .then((body) => {
-        console.log("");
-    });
-});
 
 
