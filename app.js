@@ -2,19 +2,15 @@ var express=require("express");
 var bodyParser=require("body-parser");
 var nodemailer = require('nodemailer');
 require('dotenv').config();
+//For keeping up the render server up all the time
+var cron = require('node-cron');
 
-//Restarting the server since render stopp it
-const wokeUp = require("./cron");
-wokeUp.stayUp();
 const port = process.env.PORT || 3001;///Added
- 
 const mongoose = require('mongoose');
-
 mongoose.connect('mongodb+srv://' + process.env.MONGOUSER + ':'+ process.env.MONGOPASS + '@cluster0.a3r3zu4.mongodb.net/ERERdesign');
 
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
-
 db.once('open', function(callback){
     console.log("connection succeeded");
 })
@@ -86,9 +82,8 @@ const server = app.listen(port, () => console.log(`App listening on port ${port}
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
-//console.log("server listening at port 10000");
-//}).listen(10000)
-
-//console.log("server listening at port 10000");
-
+//Restarting the server since render stopp it
+cron.schedule('* * * * * *', () => {
+  console.log('Run every second!!!');
+});
 
