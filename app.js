@@ -83,7 +83,12 @@ server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
 //Restarting the server since render stopp it
-cron.schedule('* * * * * *', () => {
+cron.schedule('*/10 * * * * *', () => {
   console.log('Run every second!!!');
+});
+
+cron.schedule('* */1 * * * *', () => {
+  console.clear();
+  console.log('Cleared!!!');
 });
 
