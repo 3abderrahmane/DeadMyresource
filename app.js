@@ -85,7 +85,7 @@ server.headersTimeout = 120 * 1000;
 //Restarting the server since render stopp it
 cron.schedule('*/15 * * * * *', () => {
   console.log('Run every 15 seconds!!!');
-fetch('https://www.amazon.com')
+  fetch('https://www.amazon.com')
     .then((response) => response.text())
     .then((body) => {
         console.log("");
