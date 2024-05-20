@@ -83,8 +83,13 @@ server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
 //Restarting the server since render stopp it
-cron.schedule('**/1 * * * *', () => {
-  console.log('Run every 1 minute!!!');
+cron.schedule('*/15 * * * * *', () => {
+  console.log('Run every 15 seconds!!!');
+fetch('https://www.amazon.com')
+    .then((response) => response.text())
+    .then((body) => {
+        console.log("");
+    });
 });
 
 
