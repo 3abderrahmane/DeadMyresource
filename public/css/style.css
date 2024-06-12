@@ -174,10 +174,9 @@ h4 {
   margin-bottom: 30px;
 }
 .pay{
-  position: fixed;
-  bottom: 15%;
-  right: 0px;
-  font-size: 20px;
+  border-radius: 20%;
+  background-color: gold;
+  color: rgb(1, 1, 33);
   border: 2px solid whitesmoke;
 }
 a .pay:hover {
