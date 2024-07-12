@@ -121,7 +121,6 @@ header{
   direction: rtl;
   letter-spacing: 3px;
 }
-
 .credibility{
   padding-bottom: 20px;
   font-size: 20px;
@@ -172,6 +171,21 @@ h4 {
 }
 #aboutkeys{
   margin-bottom: 30px;
+}
+.callnow{
+  color: blue;
+  background-color: rgb(240, 245, 140);
+  font-weight: bold;
+  border-radius: 14%;
+  padding: 2px;
+  border-width: 3px;
+  font-size: 20px;
+}
+.callnow:hover{
+  color:rgb(204, 206, 217);
+  background-color: rgb(87, 16, 242);
+  font-weight: bold;
+
 }
 .pay{
   border-radius: 20%;
