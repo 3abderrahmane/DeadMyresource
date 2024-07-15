@@ -245,3 +245,11 @@ footer p {
 	font-stretch: expanded;
 	font-size: 14px;
 }
+@media only screen and (max-width: 400px) {
+  .ultimate{
+    display: none;
+  }
+  .footerborder{
+    background:chocolate;
+  }
+}
