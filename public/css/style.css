@@ -52,7 +52,7 @@ header{
   margin-top: 20px;
   background-color:dimgrey;
   opacity: 0.95;
-  padding: 0px;
+  padding-bottom: 10px;
 }
 .headerborder{
   color: #6CC644 blue;
@@ -84,11 +84,33 @@ header{
   text-decoration: underline;
  }
  #submit {
+  visibility: hidden;
   font-size: 20px;
   border: 2px solid orange;
   background:rgb(28, 56, 1);
-  margin-bottom: 50px;
- }
+  margin-bottom: 10px;
+  margin-top: 5px; 
+  animation: glowing 1500ms infinite;
+}
+@keyframes glowing {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 3px #5458d1;
+  }
+  50% {
+    background-color: #48773a;
+    box-shadow: 0 0 10px #238904;
+  }
+  75% {
+    background-color: #121214;
+    box-shadow: 0 0 3px #a8ed93;
+  }
+  100% {
+    background-color: #736df0;
+    box-shadow: 0 0 3px #a8ed93;
+  }
+}
+
 #submit:hover{
   color:black;
   background-color: whitesmoke;
@@ -211,6 +233,38 @@ a .pay:hover {
   color: rgb(11, 2, 0);
   font-size:large;
   font-style: oblique;
+}
+.spamwrappr {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+#generated-captcha {
+  text-decoration: line-through;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  background-color: #ded5ec;
+  border-radius: 6px;
+  border:none;
+  padding: 6px;
+  outline: none;
+  color: rgb(30, 21, 3);
+}
+#entered-captcha {
+  margin-top: 5px;
+  border: 5px solid #456de6;
+  font-family: monospace;
+  outline: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+#gen {
+  background-color: #1029cd;
+  color: #ccc;
 }
 #paybox{
   width:80%; 

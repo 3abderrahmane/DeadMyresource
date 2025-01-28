@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="generate()">
 	<header id="top">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light headerborder">
 		  <div class="container">
@@ -116,8 +116,21 @@
                      <textarea name="message" id="message" required="" class="form-control" rows="3" placeholder="Write your message here" ></textarea>
                    </div>
                    <div class="container" style="text-align: center;">
-                  	 <hr class="bg-white">
-                     <button id="submit" class="btn btn-info btn-lg">Submit Now</button>
+					   <div class="spamwrapper"></div>
+					   <h2 id="status" style="color: #7b57f4;"></h2>
+					   <div>
+						   <input type="text" readonly id="generated-captcha">
+					   </div>
+					   <div>
+						   <input type="text" id="entered-captcha" placeholder="Enter the code...">
+					   </div>
+					   <button type="button" onclick="check()">
+						   Check
+					   </button>
+					   <button type="button" onclick="generate()" id="gen">
+							New Code
+					   </button>
+                       <button id="submit" class="btn btn-info btn-lg">Submit Now</button>
                    </div>
 				</form>
 				 <!-- Modal -->
@@ -130,7 +143,7 @@
 				<p class="text-white font-weight-bold bg-primary lead text-center">We also can be reached at:</p>
 				<p>E-Mail: <span class="e-mail" data-user="rerE" data-website="moc.asu"></span></p>
 				<a href="mailto:erer@usa.com"><button class="callnow">Mail Now</button></a>
-				<p>Phone: <span class="e-phone" data-user="0894-142-175"></span></p>
+				<p>Phone: <span class="e-phone" data-user="3762-362-175"></span></p>
 				<a href="tel:5712414980"><button class="callnow">Call Now</button></a>
 				<hr>
 			</div>
@@ -215,6 +228,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/basics.js"></script>	
+	<script src="js/basics.js"></script>
+	<script src="js/spamcheck.js"></script>
 </body>
 </html>
