@@ -5,6 +5,7 @@ let status = document.getElementById('status');
 status.innerText = "Spam Check";
 let spam = document.getElementById('submit');
 let newgen = document.getElementById('gen');
+let checkCode = document.getElementById('checkcode');
 
  generate = () => {
 // console.log(status)
@@ -27,7 +28,9 @@ status.innerText = "Spam Check";
     if(userValue == captcha){
         status.innerText = "";
         spam.style.visibility = "visible";
-        newgen.style.visibility ="hidden";
+        spam.style.marginTop= "0px";
+        newgen.style.visibility = "hidden";
+        checkCode.style.visibility = "hidden";
     }else{
         status.innerText = "Incorrect Code!!"
         document.getElementById("entered-captcha").value = '';
